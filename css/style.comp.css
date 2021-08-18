@@ -123,17 +123,25 @@ a {
     .modal__box p {
       font-size: 1.6rem; }
   .modal__image {
-    padding: 2.5rem 0 0 0; }
+    padding: 2.5rem 0 0 0;
+    width: 50%; }
     @media (min-width: 75em) {
       .modal__image {
-        padding: 0 0 0 5rem; } }
+        padding: 0 0 0 5rem;
+        width: 100%; } }
   .modal__name {
-    font-size: 5rem; }
+    font-size: 3rem; }
+    @media (min-width: 75em) {
+      .modal__name {
+        font-size: 5rem; } }
   .modal__title {
     color: blue;
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin: 2rem 0 3rem 0;
     font-weight: 600; }
+    @media (min-width: 75em) {
+      .modal__title {
+        font-size: 2.5rem; } }
 
 .input {
   display: none; }
