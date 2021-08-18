@@ -16,10 +16,13 @@ function loadData(){
 
             leadership.map(function( item){
                 console.log(item)
+                let id = item.name
+                id = id.toLowerCase().replace(/\s/g, '');
+                console.log(id)
                 let bio = `
                     <div class="grid__card">
-                        <input type="checkbox" id="grid-1" class="input"/>
-                        <label for="grid-2">
+                        <input type="checkbox" id="${id}" class="input"/>
+                        <label for="${id}">
                             <img src="${item.photo_url}" alt="Photo of ${item.name}" class="bio__image">
                             <div class="bio">
                                 <p class="bio__name">${item.name}</p>
