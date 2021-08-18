@@ -1,0 +1,59 @@
+.main{
+
+    padding: 5rem 10rem;
+    max-width: 150rem;
+    margin: 0 auto;
+
+    @include breakpoint(medium){
+        padding: 7.5rem 10rem;
+    }
+
+    @include breakpoint(large){
+        padding: 10rem;
+    }
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+
+    @include breakpoint(medium){
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 4rem;
+    }
+
+    @include breakpoint(large){
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 6rem;
+    }
+
+    &__card{
+        background-color: aqua;
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+h1{
+    font-size: 4rem;
+    margin: 0 0 4rem 0;
+}
+
+.modal{
+    display: none;
+}
+
+input{
+    display: none;
+}
+
+label{
+    width: 100%;
+}

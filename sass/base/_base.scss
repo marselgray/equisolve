@@ -1,0 +1,70 @@
+/* CSS reset */
+*, 
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+*:focus{
+	outline: none;
+}
+
+// mobile first design
+@mixin breakpoint($breakpoint) {
+	@if $breakpoint == small {
+		@media (min-width: 37.5em){
+			@content;
+		}
+	}
+
+	@if $breakpoint == medium {
+		@media (min-width: 56.25em){
+			@content;
+		}
+	}
+
+	@if $breakpoint == large {
+		@media (min-width: 75em){
+			@content;
+		}
+	}
+
+	@if $breakpoint == xlarge {
+		@media (min-width: 112.5em){
+			@content;
+		}
+	}
+}
+
+// Colors
+
+$white: #fff;
+$black: #000;
+$grey: #D3D3D3;
+
+
+
+
+
+html{
+	font-size: 62.5%;
+}
+
+
+body{
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+
+a{
+	text-decoration: none;
+	color: $black;
+}
+
+
+
+
+
+
