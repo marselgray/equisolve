@@ -42,7 +42,8 @@
 
 $white: #fff;
 $black: #000;
-$grey: #D3D3D3;
+$grey: #DCDCDC;
+$snow: #fffafa;
 
 
 
@@ -56,6 +57,7 @@ html{
 body{
 	box-sizing: border-box;
 	font-family: 'Roboto', sans-serif;
+	background-color: $grey;
 }
 
 a{

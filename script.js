@@ -31,7 +31,12 @@ function loadData(){
                             </div>
                         </label>
                         <div class="modal">
-                            Pop UP HERE
+                            <p class="modal__name">${item.name}</p>
+                            <p class="modal__title">${item.title}</p>
+                            <div class="modal__box">
+                                ${item.bio}
+                                <img src="${item.photo_url}" alt="Photo of ${item.name}" class="modal__image">
+                            </div>
                         </div>
                     </div>
                 `;

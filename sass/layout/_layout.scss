@@ -36,6 +36,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        background-color: $snow;
     }
 }
 
@@ -46,6 +47,48 @@ h1{
 
 .modal{
     display: none;
+
+    background: $snow;
+    position: fixed;
+    height: auto;
+    width: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 8rem;
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include breakpoint(large){
+            flex-direction: row;
+        }
+    }
+
+    p{
+        font-weight: 600;
+        font-size: 1.6rem;
+    }
+
+    &__image{
+        padding: 2.5rem 0 0 0;
+        
+        @include breakpoint(large){
+            padding: 0 0 0 5rem;
+        }
+    }
+
+    &__name{
+        font-size: 5rem;
+    }
+
+    &__title{
+        color: blue;
+        font-size: 3rem;
+        margin: 2rem 0 3rem 0;
+    }
 }
 
 input{
@@ -55,4 +98,8 @@ input{
 label{
     width: 100%;
     cursor: pointer;
+}
+
+input:checked ~ .modal{
+    display: block;
 }

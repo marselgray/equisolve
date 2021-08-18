@@ -14,7 +14,8 @@ html {
 
 body {
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif;
+  background-color: #DCDCDC; }
 
 a {
   text-decoration: none;
@@ -26,14 +27,15 @@ a {
     width: 100%; }
   .bio__name {
     font-size: 2.5rem;
-    font-weight: 700;
-    margin: 2rem 0; }
+    font-weight: 600;
+    margin: 3rem 0 2rem 0; }
   .bio__title {
     font-size: 1.6rem;
     color: blue; }
   .bio__view {
     font-size: 1.6rem;
-    margin: 2rem 0; }
+    margin: 4rem 0;
+    font-weight: 600; }
 
 .main {
   padding: 5rem 10rem;
@@ -65,14 +67,44 @@ a {
   .grid__card {
     display: flex;
     flex-direction: row;
-    align-items: center; }
+    align-items: center;
+    background-color: #fffafa; }
 
 h1 {
   font-size: 4rem;
   margin: 0 0 4rem 0; }
 
 .modal {
-  display: none; }
+  display: none;
+  background: #fffafa;
+  position: fixed;
+  height: auto;
+  width: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 8rem; }
+  .modal__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    @media (min-width: 75em) {
+      .modal__box {
+        flex-direction: row; } }
+  .modal p {
+    font-weight: 600;
+    font-size: 1.6rem; }
+  .modal__image {
+    padding: 2.5rem 0 0 0; }
+    @media (min-width: 75em) {
+      .modal__image {
+        padding: 0 0 0 5rem; } }
+  .modal__name {
+    font-size: 5rem; }
+  .modal__title {
+    color: blue;
+    font-size: 3rem;
+    margin: 2rem 0 3rem 0; }
 
 input {
   display: none; }
@@ -80,3 +112,6 @@ input {
 label {
   width: 100%;
   cursor: pointer; }
+
+input:checked ~ .modal {
+  display: block; }
